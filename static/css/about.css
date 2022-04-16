@@ -15,6 +15,9 @@ letter-spacing: 0.5px;
 color: #383C3E;
 }
 
+
+
+
 .our_team{
 font-family: 'Inter';
 font-style: normal;
@@ -54,11 +57,19 @@ margin-bottom: 50px;
     border: 2px solid grey;
     /* box-shadow: 0px 0px 10px grey; */
 }
-.textcircle{
-    width: 264px;
-    height: 72px;
+/* .textcircle{ */
+    /* width: 264px; */
+    /* height: 72px; */
     /* background-color: yellow; */
+/* } */
+
+.intro{
+    margin-top: 2%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
+
 .textcir{
     max-width: 204px;
     white-space: pre-wrap;
