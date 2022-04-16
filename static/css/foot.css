@@ -1,0 +1,41 @@
+.foot{
+    position: relative;
+    width: 1519px;
+    height: 500px;
+    left: 0px;
+    top: 1800px;
+    background: #C4C4C4;
+}
+.disclaimer{
+font-family: 'Microsoft Yi Baiti';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 160%;
+
+letter-spacing: 0.5px;
+
+color: #000000;
+}
+.disc{
+    font-family: 'Microsoft Yi Baiti';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    letter-spacing: 0.5px;  
+    color: #000000;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.copy{
+    width: 1519px;
+    height: 500px;
+}
+.copy1{
+    width: 1507px;
+    height: 500px;
+    margin-left: 6px;
+    padding: 40px;
+  }

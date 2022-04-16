@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inhouse</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/skeleton.css">
+    <link rel="stylesheet" href="/static/css/features.css">
+    <link rel="stylesheet" href="/static/css/about.css">
+    <link rel="stylesheet" href="/static/css/foot.css">
+    <link rel="stylesheet" href="/static/css/research.css">
+    <link rel="stylesheet" href="/static/css/bar.css">
+    <link rel="stylesheet" href="static/css/actgauge.css">
+    
+<!-- Activity Gauge -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<!-- Bar graph -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<!-- Comparative bars -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+</head>
+
+<!-- Choropleth -->
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+
+<link rel="stylesheet" href="/static/css/choropleth.css">
+
+<body>
+<div class="skeleton">
+    <div class="jumbo">
+        <div class="title">
+            <p>Inhouse Project</p>
+            <div class="buttons">
+                <button class="btn">Let's Go<img class="arrow"src="/static/Arrow 2.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div class="researchdatatitle">
+        <p class="text_research">Research Data</p>
+    </div>
+    <div class="researchdata">
+        <div class="stats">
+            <div class="bars" id="container">
+                <script  type="text/javascript" src="/static/js/bar.js"></script>
+            </div>
+            <div class="act" id="actg">
+                <figure class="highcharts-figure1">
+                    <div id="container1"></div>
+                    <script  type="text/javascript" src="/static/js/actguage.js"></script>
+                </figure>
+            </div>
+
+        </div>
+        <div class="stats1">
+            <div class="choropleth">
+                <div id="container3">
+                    <p id="demo"></p>
+                    <script  type="text/javascript" src="/static/js/choropleth.js"></script>
+                </div>
+            </div>
+            <div class="comparative" id="container4">
+                    <script  type="text/javascript" src="/static/js/comparative.js"></script>
+            </div>
+        </div>
+        <div class="stats_info">
+            <p class="stats_text">Chronic Kidney Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow for gathering datasets, incorporating data prepossessing, addressing missing</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="text">You only get to live once. Please take care of your health,<br> fill out the form & allow us to assist you in your journey!</p>
+    </div>
+
+
+    <div class="box2">
+
+        <div class="wrapper">
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Name</label>
+            </div>
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Email</label>
+            </div>
+            <div class="outer">
+                <div class="inner1">
+                    <input type="text1" required>
+                    <div class="underline1"></div>
+                    <label>Country</label>
+                </div>
+                <div class="inner2">
+                    <input type="text2" required>
+                    <div class="underline"></div>
+                    <label>Age</label>
+                </div>
+            </div>
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Albumin</label>
+            </div>
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Serum Creatinine</label>
+            </div>
+            <div class="drops">
+                <div class="dropdown">
+                    <label>Diabetes Mellitus</label>
+                    <div class="dropdown-select">
+                        <span class="select">None</span>
+                        <img src="/static/logo/Chevron.svg" alt="">
+                    </div>
+                    <div class="dropdownlist">
+                        <div class="dropdown-list_items">Yes</div>
+                        <div class="dropdown-list_items">No</div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <label>Hypertension</label>
+                    <div class="dropdown-select">
+                        <span class="select">None</span>
+                        <img src="/static/logo/Chevron.svg" alt="">
+                    </div>
+                    <div class="dropdownlist">
+                        <div class="dropdown-list_items">Yes</div>
+                        <div class="dropdown-list_items">No</div>
+                    </div>
+                </div>
+            </div>          
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Haemoglobin</label>
+            </div>
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Packed Cell Volume</label>
+            </div>
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Red Blood Cell Count</label>
+            </div>
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Blood Glucose</label>
+            </div>
+            <div class="input-data">
+                <input type="text" required>
+                <div class="underline"></div>
+                <label>Specific Gravity</label>
+            </div>
+                <img src="static/logo/Button.svg" alt="">
+                <div class="check">
+                    <label for="checkid"  style="word-wrap:break-word">
+                        <input class="checker" id="checkid"  type="checkbox" value="test" />I want to protect my data by signing an NDA
+                     </label>
+                </li>
+                </div>
+                <li>
+        </div>
+
+        <div class="wrapper2">
+                <p class="text_abs">Abstract</p>
+                <p class="abs">Chronic Kidney Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow for gathering datasets, incorporating data prepossessing, addressing missing values, and selecting features. To anticipate the accuracy, relevant features are separated into a train-test ratio and various machine learning methods are performed. The final result indicates whether or not the person has CKD.</p>
+                <div class="enq">
+                    <p class="enquiry">For Quick Inquires</p>
+                </div>
+                <div class="contact">
+                    <div class="flag">
+                        <img src="/static/logo/Vector.svg" alt="">
+                    </div>
+                    <div class="phn">
+                        <p class="phn">+91 3333333330</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="flag">
+                        <img src="/static/logo/Vector.svg" alt="">
+                    </div>
+                    <div class="phn">
+                        <p class="phn">+91 2222222225</p>
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <p class="news">Would you like to join our newsletter?</p>
+                    <div class="outline">
+                        <div class="input-data">
+                            <input type="text" required>
+                            <div class="underline"></div>
+                            <label>Email</label>
+                        </div>
+                        <div class="tick">
+                            <img src="static/logo/Button1.svg" alt="" width="71" height="50">
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="features">
+<p class="feature">Features</p>
+<div class="feature1">
+        <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
+    <div class="image1">
+    <img class="imge" src="/static/logo/Group 11.svg" alt="">
+    </div>
+</div>
+<div class="feature1">
+    <div class="image1">
+        <img class="imge" src="/static/logo/Group 11.svg" alt="">
+    </div>
+    <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
+</div>
+<div class="feature1">
+    <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
+<div class="image1">
+    <img class="imge" src="/static/logo/Group 11.svg" alt="">
+</div>
+</div>
+<div class="feature1">
+<div class="image1">
+    <img class="imge" src="/static/logo/Group 11.svg" alt="">
+</div>
+<p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
+</div>
+
+
+
+<p class="line"></p>
+<p class="linetext">About</p>
+<p class="linee"></p>
+<div class="abouts">
+<p class="about_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur et quisquam fuga, ipsa tempora quo soluta. Rem, quo ipsa? Pariatur quod nostrum accusamus dolorum atque, optio officia, animi laborum deleniti iure odio? Possimus asperiores liberoita. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui alias officia fugit, officiis et veritatis facere, nulla aliquam, beatae hic ipsa velit maxime sint nobis Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur perferendis ea ex sequi iusto, ut blanditiis cupiditate fuga culpa minus, laudantium quibusdam quidem,  lorem  repudiandae quas ab aliquam neque suscipit? repudiandae adipisci! Natus, quibusdam aperiam.</p>
+</div>
+<div class="team">
+    <p class="our_team">Our Team</p>
+</div>
+<div class="circles">
+    <div class="circle1">
+        <div class="textcircle">
+            <p class="textcir">Dr. Renu Vyas </p>
+            <p>Head of Department MIT School of Bioenginnering science and research</p>
+        </div>
+    </div>
+    <div class="circle1">
+        <div class="textcircle">
+            <p class="textcir">Dr. Renu Vyas </p>
+            <p>Head of Department MIT School of Bioenginnering science and research</p>
+        </div>
+    </div>
+    <div class="circle1">
+        <div class="textcircle">
+            <p class="textcir">Dr. Renu Vyas </p>
+            <p>Head of Department MIT School of Bioenginnering science and research</p>
+        </div>
+    </div>
+    </div>
+<div class="circless">
+    <div class="circle1">
+        <div class="textcircle">
+            <p class="textcir">Dr. Renu Vyas</p>
+            <p>Head of Department MIT School of Bioenginnering science and research</p>
+        </div>
+    </div>
+    <div class="circle2">
+        <div class="textcircle">
+            <p class="textcir">Dr. Renu Vyas </p>
+            <p>Head of Department MIT School of Bioenginnering science and research</p>
+        </div>
+    </div>
+</div>
+<div class="social">
+    <p class="socials_prof_text">Social's Profile</p>
+</div>
+<div class="social_media">
+    <div class="handles">
+         <a href="https://facebook.com"><img class="fb" src="/static/logo/facebook.svg" alt=""></a>
+    </div>
+    <div class="handles">
+      <a href="https://instagram.com"> <img class="in" src="/static/logo/instagram.svg" alt=""></a> 
+    </div>
+    <div class="handles">
+        <a href="https://linkedin.com"> <img class="lin" src="/static/logo/linkedin.svg" alt=""></a>
+    </div>
+    <div class="handles">
+        <a href="https://twitter.com"><img class="tw" src="/static/logo/twitter (1).svg" alt=""></a>
+    </div>
+    <div class="handles">
+        <a href="https://whatsappcom"><img class="wp" src="/static/logo/whatsapp.svg" alt=""></a>
+    </div>
+    <div class="handles">
+     <a href="https://youtube.com"><img class="you" src="/static/logo/youtube.svg" alt=""></a>
+    </div>
+</div>
+</div>
+</div>
+
+<footer class="foot">
+<div class="copy">
+    <div class="copy1">
+    <p class="disc">  DISCLAIMER: Copyright © 2022 ____________ All rights</p>
+    <p class="disclaimer">Copyright Disclaimer under Section 107 of the copyright act 1976, allowance is made for fair use for purposes such as criticism, comment, news reporting, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favour of fair use. This website may contain proprietary or legally privileged information. In case you are not the original intended Recipient of the website, you must not, directly or indirectly, use, disclose, distribute, print, or copy any part of this website. Any views expressed in this website are those of the individual organization unless otherwise stated. Nothing contained in this website shall be construed as an offer or acceptance of any offer by ______ unless sent with that express intent and with due authority of ________ has taken enough precautions to prevent the spread of viruses. However the Trust accepts no liability for any damage caused by any virus transmitted by this website.</p>
+</div>
+</div>
+</footer>
+</body>
+
+</html>
