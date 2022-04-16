@@ -6,45 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inhouse</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/skeleton.css">
-    <link rel="stylesheet" href="/static/css/features.css">
-    <link rel="stylesheet" href="/static/css/about.css">
-    <link rel="stylesheet" href="/static/css/foot.css">
-    <link rel="stylesheet" href="/static/css/research.css">
-    <link rel="stylesheet" href="/static/css/bar.css">
-    <link rel="stylesheet" href="static/css/actgauge.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/features.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/foot.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/research.css') }}">
+
+
     
 <!-- Activity Gauge -->
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/highcharts-more.js"></script>
-<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<script src="{{ url_for('static', filename='js/highcharts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/highcharts-more.js') }}"></script>
+<script src="{{ url_for('static', filename='js/solid-gauge.js') }}"></script>
+<script src="{{ url_for('static', filename='js/exporting.js') }}"></script>
+<script src="{{ url_for('static', filename='js/export-data.js') }}"></script>
+<script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/actgauge.css') }}">
+
 
 <!-- Bar graph -->
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="{{ url_for('static', filename='js/highcharts.js') }}"></script>
+<script src="{{ url_for('static', filename='js/data.js') }}"></script>
+<script src="{{ url_for('static', filename='js/drilldown.js') }}"></script>
+<script src="{{ url_for('static', filename='js/exporting.js') }}"></script>
+<script src="{{ url_for('static', filename='js/export-data.js') }}"></script>
+<script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bar.css') }}">
+
 
 <!-- Comparative bars -->
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/modules/export-data.js"></script>
-<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/comparative.css') }}">
 
 <!-- Choropleth -->
-<script src="https://code.highcharts.com/maps/highmaps.js"></script>
-<script src="https://code.highcharts.com/maps/modules/data.js"></script>
-<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+<script src="{{ url_for('static', filename='js/highmaps.js') }}"></script>
+<script src="{{ url_for('static', filename='js/offline-exporting.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/choropleth.css') }}">
+</head>
 
-<link rel="stylesheet" href="/static/css/choropleth.css">
+
 
 <body>
 <div class="skeleton">
@@ -52,7 +54,7 @@
         <div class="title">
             <p>Inhouse Project</p>
             <div class="buttons">
-                <button class="btn">Let's Go<img class="arrow"src="/static/Arrow 2.svg" alt=""></button>
+                <button class="btn">Let's Go<img class="arrow"src="{{ url_for('static', filename='logo/Arrow 2.svg') }}" alt=""></button>
             </div>
         </div>
     </div>
@@ -62,12 +64,12 @@
     <div class="researchdata">
         <div class="stats">
             <div class="bars" id="container">
-                <script  type="text/javascript" src="/static/js/bar.js"></script>
+                <script  type="text/javascript" src="{{ url_for('static', filename='js/bar.js') }}"></script>
             </div>
             <div class="act" id="actg">
                 <figure class="highcharts-figure1">
                     <div id="container1"></div>
-                    <script  type="text/javascript" src="/static/js/actguage.js"></script>
+                    <script  type="text/javascript" src="{{ url_for('static', filename='js/actgauge.js') }}"></script>
                 </figure>
             </div>
 
@@ -76,11 +78,11 @@
             <div class="choropleth">
                 <div id="container3">
                     <p id="demo"></p>
-                    <script  type="text/javascript" src="/static/js/choropleth.js"></script>
+                    <script  type="text/javascript" src="{{ url_for('static', filename='js/choropleth.js') }}"></script>
                 </div>
             </div>
             <div class="comparative" id="container4">
-                    <script  type="text/javascript" src="/static/js/comparative.js"></script>
+                    <script  type="text/javascript" src="{{ url_for('static', filename='js/comparative.js') }}"></script>
             </div>
         </div>
         <div class="stats_info">
@@ -133,7 +135,7 @@
                     <label>Diabetes Mellitus</label>
                     <div class="dropdown-select">
                         <span class="select">None</span>
-                        <img src="/static/logo/Chevron.svg" alt="">
+                        <img src="{{ url_for('static', filename='logo/Chevron.svg') }}" alt="">
                     </div>
                     <div class="dropdownlist">
                         <div class="dropdown-list_items">Yes</div>
@@ -144,7 +146,7 @@
                     <label>Hypertension</label>
                     <div class="dropdown-select">
                         <span class="select">None</span>
-                        <img src="/static/logo/Chevron.svg" alt="">
+                        <img src="{{ url_for('static', filename='logo/Chevron.svg') }}" alt="">
                     </div>
                     <div class="dropdownlist">
                         <div class="dropdown-list_items">Yes</div>
@@ -177,7 +179,7 @@
                 <div class="underline"></div>
                 <label>Specific Gravity</label>
             </div>
-                <img src="static/logo/Button.svg" alt="">
+                <img src="{{ url_for('static', filename='logo/Button.svg') }}" alt="">
                 <div class="check">
                     <label for="checkid"  style="word-wrap:break-word">
                         <input class="checker" id="checkid"  type="checkbox" value="test" />I want to protect my data by signing an NDA
@@ -195,7 +197,7 @@
                 </div>
                 <div class="contact">
                     <div class="flag">
-                        <img src="/static/logo/Vector.svg" alt="">
+                        <img src="{{ url_for('static', filename='logo/Vector.svg') }}" alt="">
                     </div>
                     <div class="phn">
                         <p class="phn">+91 3333333330</p>
@@ -203,7 +205,7 @@
                 </div>
                 <div class="contact">
                     <div class="flag">
-                        <img src="/static/logo/Vector.svg" alt="">
+                        <img src="{{ url_for('static', filename='logo/Vector.svg') }}" alt="">
                     </div>
                     <div class="phn">
                         <p class="phn">+91 2222222225</p>
@@ -218,7 +220,7 @@
                             <label>Email</label>
                         </div>
                         <div class="tick">
-                            <img src="static/logo/Button1.svg" alt="" width="71" height="50">
+                            <img src="{{ url_for('static', filename='logo/Button1.svg') }}" alt="" width="71" height="50">
                         </div>
                     </div>
                 </div>
@@ -229,24 +231,24 @@
 <div class="feature1">
         <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
     <div class="image1">
-    <img class="imge" src="/static/logo/Group 11.svg" alt="">
+    <img class="imge" src="{{ url_for('static', filename='logo/Group 11.svg') }}" alt="">
     </div>
 </div>
 <div class="feature1">
     <div class="image1">
-        <img class="imge" src="/static/logo/Group 11.svg" alt="">
+        <img class="imge" src="{{ url_for('static', filename='logo/Group 11.svg') }}" alt="">
     </div>
     <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
 </div>
 <div class="feature1">
     <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
 <div class="image1">
-    <img class="imge" src="/static/logo/Group 11.svg" alt="">
+    <img class="imge" src="{{ url_for('static', filename='logo/Group 11.svg') }}" alt="">
 </div>
 </div>
 <div class="feature1">
 <div class="image1">
-    <img class="imge" src="/static/logo/Group 11.svg" alt="">
+    <img class="imge" src="{{ url_for('static', filename='logo/Group 11.svg') }}" alt="">
 </div>
 <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
 </div>
@@ -301,22 +303,22 @@
 </div>
 <div class="social_media">
     <div class="handles">
-         <a href="https://facebook.com"><img class="fb" src="/static/logo/facebook.svg" alt=""></a>
+         <a href="https://facebook.com"><img class="fb" src="{{ url_for('static', filename='logo/facebook.svg') }}" alt=""></a>
     </div>
     <div class="handles">
-      <a href="https://instagram.com"> <img class="in" src="/static/logo/instagram.svg" alt=""></a> 
+      <a href="https://instagram.com"> <img class="in" src="{{ url_for('static', filename='logo/instagram.svg') }}" alt=""></a> 
     </div>
     <div class="handles">
-        <a href="https://linkedin.com"> <img class="lin" src="/static/logo/linkedin.svg" alt=""></a>
+        <a href="https://linkedin.com"> <img class="lin" src="{{ url_for('static', filename='logo/linkedin.svg') }}" alt=""></a>
     </div>
     <div class="handles">
-        <a href="https://twitter.com"><img class="tw" src="/static/logo/twitter (1).svg" alt=""></a>
+        <a href="https://twitter.com"><img class="tw" src="{{ url_for('static', filename='logo/twitter.svg') }}" alt=""></a>
     </div>
     <div class="handles">
-        <a href="https://whatsappcom"><img class="wp" src="/static/logo/whatsapp.svg" alt=""></a>
+        <a href="https://whatsappcom"><img class="wp" src="{{ url_for('static', filename='logo/whatsapp.svg') }}" alt=""></a>
     </div>
     <div class="handles">
-     <a href="https://youtube.com"><img class="you" src="/static/logo/youtube.svg" alt=""></a>
+     <a href="https://youtube.com"><img class="you" src="{{ url_for('static', filename='logo/youtube.svg') }}" alt=""></a>
     </div>
 </div>
 </div>
