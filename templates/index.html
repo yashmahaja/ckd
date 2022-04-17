@@ -97,38 +97,38 @@
 
     <div class="box2">
 
-        <form>
+        <form method="POST">
 
         <div class="wrapper">
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="name">
                 <div class="underline"></div>
                 <label>Name</label>
             </div>
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="email">
                 <div class="underline"></div>
                 <label>Email</label>
             </div>
             <div class="outer">
                 <div class="inner1">
-                    <input type="text1" required>
+                    <input type="text1" name="country">
                     <div class="underline1"></div>
                     <label>Country</label>
                 </div>
                 <div class="inner2">
-                    <input type="text2" required>
+                    <input type="text2" name="age">
                     <div class="underline"></div>
                     <label>Age</label>
                 </div>
             </div>
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="albumin">
                 <div class="underline"></div>
                 <label>Albumin</label>
             </div>
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="sc">
                 <div class="underline"></div>
                 <label>Serum Creatinine</label>
             </div>
@@ -140,7 +140,7 @@
                         <img src="{{ url_for('static', filename='logo/Chevron.svg') }}" alt="">
                     </div>
                     <div class="dropdownlist">
-                        <input name="drodown" type="hidden" placeholder="dropdown" type="text" id="dropdown" />
+                        <input name="diabetes" type="hidden" placeholder="dropdown" type="text" id="dropdown" />
                         <div class="dropdown-list_items" onclick="selectyes()">Yes</button></div>
                         <div class="dropdown-list_items"  onclick="selectno()" >No</div>
                     </div>
@@ -182,34 +182,34 @@
                             }
                     </script>
                     <div class="dropdownlist">
-                        <input name="dropdown1" type="hidden" placeholder="dropdown1" type="text" id="dropdown1" />
+                        <input name="hypertension" type="hidden" placeholder="dropdown1" type="text" id="dropdown1" />
                         <div class="dropdown-list_items" onclick="selectyes1()">Yes</div>
                         <div class="dropdown-list_items" onclick="selectno1()">No</div>
                     </div>
                 </div>
             </div>          
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="haemo">
                 <div class="underline"></div>
                 <label>Haemoglobin</label>
             </div>
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="pcv">
                 <div class="underline"></div>
                 <label>Packed Cell Volume</label>
             </div>
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="rbcc">
                 <div class="underline"></div>
                 <label>Red Blood Cell Count</label>
             </div>
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="bg">
                 <div class="underline"></div>
                 <label>Blood Glucose</label>
             </div>
             <div class="input-data">
-                <input type="text" required>
+                <input type="text" name="sg">
                 <div class="underline"></div>
                 <label>Specific Gravity</label>
             </div>
