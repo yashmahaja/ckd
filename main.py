@@ -1,9 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods=['GET', 'POST'])
 def home():
+   if request.method == 'POST':
+                name = request.form["dropdown1"]
+                
    return render_template('index.html')
 
 if __name__ == '__main__':
