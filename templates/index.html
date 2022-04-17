@@ -34,6 +34,7 @@
 <script src="{{ url_for('static', filename='js/exporting.js') }}"></script>
 <script src="{{ url_for('static', filename='js/export-data.js') }}"></script>
 <script src="{{ url_for('static', filename='js/accessibility.js') }}"></script>
+<script src="{{ url_for('static', filename='js/getmodelout.js') }}"></script>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/bar.css') }}">
 
 
@@ -49,6 +50,67 @@
 
 
 <body>
+
+    <script>
+        $(document).on('submit','#todo',function(e)
+{
+e.preventDefault();
+$.ajax({
+type:'POST',
+url:'/',
+data:{
+name:$("#name").val(),
+email:$("#email").val(),
+country:$("#country").val(),
+age:$("#age").val(),
+albumin:$("#albumin").val(),
+sc:$("#sc").val(),
+diabetes:$("#diabetes").val(),
+hypertension:$("#hypertension").val(),
+haemo:$("#haemo").val(),
+pcv:$("#pcv").val(),
+rbcc:$("#rbcc").val(),
+bg:$("#bg").val(),
+sg:$("#sg").val()
+},
+success:function()
+{
+
+console.log("success")
+}
+})
+});
+
+
+function selectyes() 
+{
+     console.log("Yes");
+      document.getElementById("diabetes").value = "1";
+      document.getElementById("dropdownvalue").innerHTML= "Yes";
+}
+function selectno() 
+{
+ console.log("No");
+      document.getElementById("diabetes").value = "0";
+      document.getElementById("dropdownvalue").innerHTML= "No";
+
+}
+
+function selectyes1() 
+{
+     console.log("Yes");
+      document.getElementById("hypertension").value = "1";
+      document.getElementById("dropdownvalue1").innerHTML= "Yes";
+}
+function selectno1() 
+{
+ console.log("No");
+      document.getElementById("hypertension").value = "0";
+      document.getElementById("dropdownvalue1").innerHTML= "No";
+
+}
+
+    </script>
 <div class="skeleton">
     <div class="jumbo">
         <div class="title">
@@ -97,38 +159,38 @@
 
     <div class="box2">
 
-        <form method="POST">
+        <form method="post" id="todo" >
 
         <div class="wrapper">
             <div class="input-data">
-                <input type="text" name="name">
+                <input type="text" name="name" id="name">
                 <div class="underline"></div>
                 <label>Name</label>
             </div>
             <div class="input-data">
-                <input type="text" name="email">
+                <input type="text" name="email" id="email">
                 <div class="underline"></div>
                 <label>Email</label>
             </div>
             <div class="outer">
                 <div class="inner1">
-                    <input type="text1" name="country">
+                    <input type="text1" name="country"  id="country">
                     <div class="underline1"></div>
                     <label>Country</label>
                 </div>
                 <div class="inner2">
-                    <input type="text2" name="age">
+                    <input type="text2" name="age" id="age">
                     <div class="underline"></div>
                     <label>Age</label>
                 </div>
             </div>
             <div class="input-data">
-                <input type="text" name="albumin">
+                <input type="text" name="albumin" id="albumin">
                 <div class="underline"></div>
                 <label>Albumin</label>
             </div>
             <div class="input-data">
-                <input type="text" name="sc">
+                <input type="text" name="sc"  id="sc">
                 <div class="underline"></div>
                 <label>Serum Creatinine</label>
             </div>
@@ -140,7 +202,7 @@
                         <img src="{{ url_for('static', filename='logo/Chevron.svg') }}" alt="">
                     </div>
                     <div class="dropdownlist">
-                        <input name="diabetes" type="hidden" placeholder="dropdown" type="text" id="dropdown" />
+                        <input name="diabetes"  type="hidden" placeholder="dropdown" type="text" id="diabetes" />
                         <div class="dropdown-list_items" onclick="selectyes()">Yes</button></div>
                         <div class="dropdown-list_items"  onclick="selectno()" >No</div>
                     </div>
@@ -152,73 +214,42 @@
                         <img src="{{ url_for('static', filename='logo/Chevron.svg') }}" alt="">
                     </div>
 
-                    <script>
-                            function selectyes() 
-                            {
-                                    console.log("Yes");
-                                     document.getElementById("dropdown").value = "1";
-                                     document.getElementById("dropdownvalue").innerHTML= "Yes";
-                            }
-                            function selectno() 
-                            {
-                                console.log("No");
-                                     document.getElementById("dropdown").value = "0";
-                                     document.getElementById("dropdownvalue").innerHTML= "No";
-
-                            }
-
-                            function selectyes1() 
-                            {
-                                    console.log("Yes");
-                                     document.getElementById("dropdown1").value = "1";
-                                     document.getElementById("dropdownvalue1").innerHTML= "Yes";
-                            }
-                            function selectno1() 
-                            {
-                                console.log("No");
-                                     document.getElementById("dropdown1").value = "0";
-                                     document.getElementById("dropdownvalue1").innerHTML= "No";
-
-                            }
-                    </script>
                     <div class="dropdownlist">
-                        <input name="hypertension" type="hidden" placeholder="dropdown1" type="text" id="dropdown1" />
+                        <input name="hypertension" type="hidden" placeholder="hypertension" type="text" id="hypertension" />
                         <div class="dropdown-list_items" onclick="selectyes1()">Yes</div>
                         <div class="dropdown-list_items" onclick="selectno1()">No</div>
                     </div>
                 </div>
             </div>          
             <div class="input-data">
-                <input type="text" name="haemo">
+                <input type="text" name="haemo"  id="haemo">
                 <div class="underline"></div>
                 <label>Haemoglobin</label>
             </div>
             <div class="input-data">
-                <input type="text" name="pcv">
+                <input type="text" name="pcv" id="pcv">
                 <div class="underline"></div>
                 <label>Packed Cell Volume</label>
             </div>
             <div class="input-data">
-                <input type="text" name="rbcc">
+                <input type="text" name="rbcc" id="rbcc">
                 <div class="underline"></div>
                 <label>Red Blood Cell Count</label>
             </div>
             <div class="input-data">
-                <input type="text" name="bg">
+                <input type="text" name="bg" id="bg">
                 <div class="underline"></div>
                 <label>Blood Glucose</label>
             </div>
             <div class="input-data">
-                <input type="text" name="sg">
+                <input type="text" name="sg" id="sg">
                 <div class="underline"></div>
                 <label>Specific Gravity</label>
             </div>
             <button name="submitform" type="submit" style="border: none; background-color: #FFFFFFFF;">
-
-                <img src="{{ url_for('static', filename='logo/Button.svg') }}" alt="" />
-
-
+                <img  src="{{ url_for('static', filename='logo/Button.svg') }}" alt="" />
             </button>
+
                 <div class="check">
                     <label for="checkid"  style="word-wrap:break-word">
                         <input class="checker" id="checkid"  type="checkbox" value="test" />I want to protect my data by signing an NDA
@@ -262,6 +293,11 @@
                             <img src="{{ url_for('static', filename='logo/Button1.svg') }}" alt="" width="71" height="50">
                         </div>
                     </div>
+                </div>
+                <div>
+                    <p id="data" style="margin-top:10%; text-align: center; font-size: 16px;" >
+                        {{data}}
+                    </p>
                 </div>
         </div>
     </div>

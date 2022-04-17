@@ -3,31 +3,35 @@ import pickle
 import numpy as np
 
 model = pickle.load(open('model(1).pkl', 'rb'))
-
+value = ""
+# pred=0
 app = Flask(__name__)
 
-
-
-@app.route('/')
-def man():
-    return render_template('index.html')
-
-
-@app.route('/predict',methods=['POST'])
-def home():
+@app.route('/',methods=['GET', 'POST'])
+def main():
    if request.method == 'POST':
-                sg = request.form["sg"]
-                al = request.form["albumin"]
-                bg = request.form["bg"]
-                sc = request.form["sc"]
-                haem = request.form["haemo"]
-                pcv = request.form["pcv"]
-                rbcc = request.form["rbcc"]
-                htn = request.form["hypertension"]
-                dia = request.form["diabetes"]
-                arr = np.array([[sg,al,bg,sc,haem,pcv,rbcc,htn,dia]])
-                pred = model.predict(arr)
-                return render_template('after.html', data=pred)
+
+      sg = float(request.form.get("sg"))
+      al = float(request.form.get("albumin"))
+      bg = float(request.form.get("bg"))
+      sc = float(request.form.get("sc"))
+      haem = float(request.form.get("haemo"))
+      pcv = float(request.form.get("pcv"))
+      rbcc = float(request.form.get("rbcc"))
+      htn = int(request.form.get("hypertension"))
+      dia = int(request.form.get("diabetes"))
+      
+      arr = np.array([[sg,al,bg,sc,haem,pcv,rbcc,htn,dia]])
+      pred = model.predict(arr)
+      # return render_template('index.html' ,data=pred)
+   else:
+      return render_template('index.html')
+
+
+# @app.route('/predict',methods=['GET', 'POST'])
+# def predict():
+  
+   
 
 if __name__ == '__main__':
    app.run(debug=True)
