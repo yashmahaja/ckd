@@ -4,7 +4,6 @@
     height: 500px;
     left: 0px;
     top: 1800px;
-    background: #C4C4C4;
 }
 .disclaimer{
 font-family: 'Microsoft Yi Baiti';
@@ -32,6 +31,7 @@ color: #000000;
 .copy{
     width: 1519px;
     height: 500px;
+    background-color: rgb(238, 115, 63, 0.11);
 }
 .copy1{
     width: 1507px;

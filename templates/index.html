@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inhouse</title>
+    <title>CKD</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/skeleton.css') }}">
 <link rel="stylesheet" href="{{ url_for('static', filename='css/features.css') }}">
@@ -50,6 +51,13 @@
 
 
 <body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 130,
+        duration: 1000
+      });
+    </script>
 
     <script>
         $(document).on('submit','#todo',function(e)
@@ -112,23 +120,24 @@ function selectno1()
 
     </script>
 <div class="skeleton">
-    <div class="jumbo">
+    <div data-aos="fade" class="jumbo">
+        <img src="{{ url_for('static', filename='logo/doc.svg') }}" alt="">
         <div class="title">
-            <p>Inhouse Project</p>
+            <p>Chronic Kidney Disease Prediction</p>
             <div class="buttons">
                 <button class="btn">Let's Go<img class="arrow"src="{{ url_for('static', filename='logo/Arrow 2.svg') }}" alt=""></button>
             </div>
         </div>
     </div>
-    <div class="researchdatatitle"  method="post" >
+    <div data-aos="fade-right" class="researchdatatitle">
         <p class="text_research">Research Data</p>
     </div>
     <div class="researchdata">
         <div class="stats">
-            <div class="bars" id="container">
+            <div data-aos="fade-right" class="bars" id="container">
                 <script  type="text/javascript" src="{{ url_for('static', filename='js/bar.js') }}"></script>
             </div>
-            <div class="act" id="actg">
+            <div  data-aos="fade-left" class="act" id="actg">
                 <figure class="highcharts-figure1">
                     <div id="container1"></div>
                     <script  type="text/javascript" src="{{ url_for('static', filename='js/actgauge.js') }}"></script>
@@ -137,65 +146,65 @@ function selectno1()
 
         </div>
         <div class="stats1">
-            <div class="choropleth">
+            <div data-aos="fade-right" class="choropleth">
                 <div id="container3">
                     <p id="demo"></p>
                     <script  type="text/javascript" src="{{ url_for('static', filename='js/choropleth.js') }}"></script>
                 </div>
             </div>
-            <div class="comparative" id="container4">
+            <div data-aos="fade-left" class="comparative" id="container4">
                     <script  type="text/javascript" src="{{ url_for('static', filename='js/comparative.js') }}"></script>
             </div>
         </div>
-        <div class="stats_info">
+        <div data-aos="fade-right" class="stats_info">
             <p class="stats_text">Chronic Kidney Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow for gathering datasets, incorporating data prepossessing, addressing missing</p>
         </div>
     </div>
 
-    <div class="box">
+    <div data-aos="fade-in" class="box">
         <p class="text">You only get to live once. Please take care of your health,<br> fill out the form & allow us to assist you in your journey!</p>
     </div>
 
 
     <div class="box2">
 
-        <form method="post" id="todo" >
+        <form  method="post" id="todo" >
 
         <div class="wrapper">
-            <div class="input-data">
+            <div data-aos="fade-right" class="input-data">
                 <input type="text" name="name" id="name">
                 <div class="underline"></div>
                 <label>Name</label>
             </div>
-            <div class="input-data">
+            <div data-aos="fade-right" class="input-data">
                 <input type="text" name="email" id="email">
                 <div class="underline"></div>
                 <label>Email</label>
             </div>
             <div class="outer">
-                <div class="inner1">
+                <div data-aos="fade-right" class="inner1">
                     <input type="text1" name="country"  id="country">
                     <div class="underline1"></div>
                     <label>Country</label>
                 </div>
-                <div class="inner2">
+                <div data-aos="fade-left" class="inner2">
                     <input type="text2" name="age" id="age">
                     <div class="underline"></div>
                     <label>Age</label>
                 </div>
             </div>
-            <div class="input-data">
+            <div data-aos="fade-right" class="input-data">
                 <input type="text" name="albumin" id="albumin">
                 <div class="underline"></div>
                 <label>Albumin</label>
             </div>
-            <div class="input-data">
+            <div data-aos="fade-right" class="input-data">
                 <input type="text" name="sc"  id="sc">
                 <div class="underline"></div>
                 <label>Serum Creatinine</label>
             </div>
             <div class="drops">
-                <div class="dropdown">
+                <div data-aos="fade-right" class="dropdown">
                     <label>Diabetes Mellitus</label>
                     <div class="dropdown-select">
                         <span class="select" id="dropdownvalue">None</span>
@@ -207,7 +216,7 @@ function selectno1()
                         <div class="dropdown-list_items"  onclick="selectno()" >No</div>
                     </div>
                 </div>
-                <div class="dropdown">
+                <div data-aos="fade-left" class="dropdown">
                     <label>Hypertension</label>
                     <div class="dropdown-select">
                         <span class="select" id="dropdownvalue1">None</span>
@@ -221,36 +230,36 @@ function selectno1()
                     </div>
                 </div>
             </div>          
-            <div class="input-data">
+            <div data-aos="fade-right" class="input-data">
                 <input type="text" name="haemo"  id="haemo">
                 <div class="underline"></div>
                 <label>Haemoglobin</label>
             </div>
-            <div class="input-data">
+            <div  data-aos="fade-right" class="input-data">
                 <input type="text" name="pcv" id="pcv">
                 <div class="underline"></div>
                 <label>Packed Cell Volume</label>
             </div>
-            <div class="input-data">
+            <div  data-aos="fade-right" class="input-data">
                 <input type="text" name="rbcc" id="rbcc">
                 <div class="underline"></div>
                 <label>Red Blood Cell Count</label>
             </div>
-            <div class="input-data">
+            <div data-aos="fade-right" class="input-data">
                 <input type="text" name="bg" id="bg">
                 <div class="underline"></div>
                 <label>Blood Glucose</label>
             </div>
-            <div class="input-data">
+            <div data-aos="fade-right" class="input-data">
                 <input type="text" name="sg" id="sg">
                 <div class="underline"></div>
                 <label>Specific Gravity</label>
             </div>
-            <button name="submitform" type="submit" style="border: none; background-color: #FFFFFFFF;">
+            <button data-aos="fade-right" name="submitform" type="submit" style="border: none; background-color: #FFFFFFFF;">
                 <img  src="{{ url_for('static', filename='logo/Button.svg') }}" alt="" />
             </button>
 
-                <div class="check">
+                <div data-aos="fade-right" class="check">
                     <label for="checkid"  style="word-wrap:break-word">
                         <input class="checker" id="checkid"  type="checkbox" value="test" />I want to protect my data by signing an NDA
                      </label>
@@ -260,12 +269,12 @@ function selectno1()
     </form>
 
         <div class="wrapper2">
-                <p class="text_abs">Abstract</p>
-                <p class="abs">Chronic Kidney Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow for gathering datasets, incorporating data prepossessing, addressing missing values, and selecting features. To anticipate the accuracy, relevant features are separated into a train-test ratio and various machine learning methods are performed. The final result indicates whether or not the person has CKD.</p>
-                <div class="enq">
+                <p data-aos="fade-left" class="text_abs">Abstract</p>
+                <p data-aos="fade-left" class="abs">Chronic Kidney Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow for gathering datasets, incorporating data prepossessing, addressing missing values, and selecting features. To anticipate the accuracy, relevant features are separated into a train-test ratio and various machine learning methods are performed. The final result indicates whether or not the person has CKD.</p>
+                <div data-aos="fade-left" class="enq">
                     <p class="enquiry">For Quick Inquires</p>
                 </div>
-                <div class="contact">
+                <div data-aos="fade-left" class="contact">
                     <div class="flag">
                         <img src="{{ url_for('static', filename='logo/Vector.svg') }}" alt="">
                     </div>
@@ -273,7 +282,7 @@ function selectno1()
                         <p class="phn">+91 3333333330</p>
                     </div>
                 </div>
-                <div class="contact">
+                <div data-aos="fade-left" class="contact">
                     <div class="flag">
                         <img src="{{ url_for('static', filename='logo/Vector.svg') }}" alt="">
                     </div>
@@ -282,8 +291,8 @@ function selectno1()
                     </div>
                 </div>
                 <div class="newsletter">
-                    <p class="news">Would you like to join our newsletter?</p>
-                    <div class="outline">
+                    <p data-aos="fade-left" class="news">Would you like to join our newsletter?</p>
+                    <div data-aos="fade-left" class="outline">
                         <div class="input-data">
                             <input type="text" required>
                             <div class="underline"></div>
@@ -295,106 +304,98 @@ function selectno1()
                     </div>
                 </div>
                 <div>
-                    <p id="data" style="margin-top:10%; text-align: center; font-size: 16px;" >
+                    <p id="data" style="margin-top:30%; text-align: center; font-size: 16px;" >
                         {{data}}
                     </p>
                 </div>
         </div>
     </div>
     <div class="features">
-<p class="feature">Features</p>
+<p data-aos="fade-right" class="feature">Features</p>
 <div class="feature1">
-        <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
-    <div class="image1">
-    <img class="imge" src="{{ url_for('static', filename='logo/Group 11.svg') }}" alt="">
+        <p data-aos="fade-right" class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
+    <div data-aos="fade-left" class="image1">
+        <img class="imge" src="{{ url_for('static', filename='logo/virus.svg') }}" alt="">
     </div>
 </div>
 <div class="feature1">
-    <div class="image1">
-        <img class="imge" src="{{ url_for('static', filename='logo/Group 11.svg') }}" alt="">
+    <div data-aos="fade-right" class="image1">
+        <img class="imge" src="{{ url_for('static', filename='logo/wbc.svg') }}" alt="">
     </div>
-    <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
+    <p data-aos="fade-left" class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
 </div>
 <div class="feature1">
-    <p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
-<div class="image1">
-    <img class="imge" src="{{ url_for('static', filename='logo/Group 11.svg') }}" alt="">
+    <p data-aos="fade-right" class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
+<div data-aos="fade-left" class="image1">
+    <img class="imge" src="{{ url_for('static', filename='logo/bac.svg') }}" alt="">
 </div>
 </div>
 <div class="feature1">
-<div class="image1">
-    <img class="imge" src="{{ url_for('static', filename='logo/Group 11.svg') }}" alt="">
+<div  data-aos="fade-right" class="image1">
+    <img class="imge" src="{{ url_for('static', filename='logo/dna.svg') }}" alt="">
 </div>
-<p class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
+<p data-aos="fade-left" class="textfeat">Chronic Kidney  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vel dolor pariatur ducimus aliquam eaque iusto, sed cumque unde animi vero porro minima quo amet sunt, ullam doloribus earum temporibus.  Disease (CKD), also known as chronic renal disease, has become a serious public health concern with  a constant increase in incidence. A person can only survive for 18 days without their kidneys, resulting in a high demand for kidney transplants and dialysis. A typical method for CKD prediction is to use machine learning algorithms on a medical database. This study presents a workflow </p>
 </div>
 
 
 
-<p class="line"></p>
-<p class="linetext">About</p>
-<p class="linee"></p>
+<p data-aos="fade-in" class="line"></p>
+<p data-aos="fade-in"class="linetext">About</p>
+<p data-aos="fade-in" class="linee"></p>
 <div class="abouts">
-<p class="about_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur et quisquam fuga, ipsa tempora quo soluta. Rem, quo ipsa? Pariatur quod nostrum accusamus dolorum atque, optio officia, animi laborum deleniti iure odio? Possimus asperiores liberoita. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui alias officia fugit, officiis et veritatis facere, nulla aliquam, beatae hic ipsa velit maxime sint nobis Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur perferendis ea ex sequi iusto, ut blanditiis cupiditate fuga culpa minus, laudantium quibusdam quidem,  lorem  repudiandae quas ab aliquam neque suscipit? repudiandae adipisci! Natus, quibusdam aperiam.</p>
+<p data-aos="fade-right" class="about_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam aspernatur et quisquam fuga, ipsa tempora quo soluta. Rem, quo ipsa? Pariatur quod nostrum accusamus dolorum atque, optio officia, animi laborum deleniti iure odio? Possimus asperiores liberoita. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui alias officia fugit, officiis et veritatis facere, nulla aliquam, beatae hic ipsa velit maxime sint nobis Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aspernatur perferendis ea ex sequi iusto, ut blanditiis cupiditate fuga culpa minus, laudantium quibusdam quidem,  lorem  repudiandae quas ab aliquam neque suscipit? repudiandae adipisci! Natus, quibusdam aperiam.</p>
 </div>
 <div class="team">
-    <p class="our_team">Our Team</p>
+    <p data-aos="fade-in" class="our_team">Our Team</p>
 </div>
 <div class="circles">
-    <div class="circle1">
+    <div data-aos="fade-right" class="circle1">
         <div class="textcircle">
-            <p class="textcir">Dr. Renu Vyas</p>
-            <p class="intro">Head of Department MIT School of Bioenginnering science and research</p>
+            <p class="textcir">lorem ipsum</p>
+            <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, deleniti.</p>
         </div>
     </div>
-    <div class="circle1">
+    <div data-aos="fade-up" class="circle1">
         <div class="textcircle">
-            <p class="textcir">Dr. Renu Vyas</p>
-            <p class="intro">Head of Department MIT School of Bioenginnering science and research</p>
+            <p class="textcir">lorem ipsum</p>
+            <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, deleniti.</p>
         </div>
     </div>
-    <div class="circle1">
+    <div data-aos="fade-left" class="circle1">
         <div class="textcircle">
-            <p class="textcir">Dr. Renu Vyas</p>
-            <p class="intro">Head of Department MIT School of Bioenginnering science and research</p>
+            <p class="textcir">lorem ipsum</p>
+            <p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, deleniti.</p>
         </div>
     </div>
     </div>
-<div class="circless">
-    <div class="circle1">
-        <div class="textcircle">
-            <p class="textcir">Dr. Renu Vyas</p>
-            <p class="intro" >Head of Department MIT School of Bioenginnering science and research</p>
-        </div>
-    </div>
+<div data-aos="fade-right" class="circless2">
     <div class="circle2">
-        <div class="textcircle">
-            <p class="textcir">Dr. Renu Vyas</p>
-       
-        
-            <p class="intro">Head of Department MIT School of Bioenginnering science and research</p>
+        <div class="textcircle2">
+            <p class="textcir2">lorem ipsum</p>
+            <p class="intro2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, deleniti.</p>
         </div>
     </div>
 </div>
-<div class="social">
+<div data-aos="fade-up" class="social">
     <p class="socials_prof_text">Social's Profile</p>
 </div>
 <div class="social_media">
-    <div class="handles">
+    <div data-aos="fade-right" class="handles">
          <a href="https://facebook.com"><img class="fb" src="{{ url_for('static', filename='logo/facebook.svg') }}" alt=""></a>
     </div>
-    <div class="handles">
+    <div data-aos="fade-right" class="handles">
       <a href="https://instagram.com"> <img class="in" src="{{ url_for('static', filename='logo/instagram.svg') }}" alt=""></a> 
     </div>
-    <div class="handles">
+    <div data-aos="fade-right" class="handles">
         <a href="https://linkedin.com"> <img class="lin" src="{{ url_for('static', filename='logo/linkedin.svg') }}" alt=""></a>
     </div>
-    <div class="handles">
+    <div data-aos="fade-left" class="handles">
         <a href="https://twitter.com"><img class="tw" src="{{ url_for('static', filename='logo/twitter.svg') }}" alt=""></a>
     </div>
-    <div class="handles">
+    <div data-aos="fade-left" class="handles">
         <a href="https://whatsappcom"><img class="wp" src="{{ url_for('static', filename='logo/whatsapp.svg') }}" alt=""></a>
     </div>
-    <div class="handles">
+    <div data-aos="fade-left" class="handles">
      <a href="https://youtube.com"><img class="you" src="{{ url_for('static', filename='logo/youtube.svg') }}" alt=""></a>
     </div>
 </div>

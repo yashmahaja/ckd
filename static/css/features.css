@@ -78,7 +78,7 @@ width: 1236px;
 height: 7.47px;
 left: 165px;
 top: 4905px;
-background: #C4C4C4;
+background: rgb(4, 42, 115);;
 }
 .linetext{
     font-family: 'Inter';
@@ -92,8 +92,7 @@ justify-content: center;
 text-align: center;
 letter-spacing: 0.5px;
 padding: 31px;
-
-color: #000000;
+color: rgb(4, 42, 115);
 }
 .linee{
     margin: 2px;
@@ -102,5 +101,5 @@ color: #000000;
     left: 165px;
     top: 4905px;
     
-    background: #C4C4C4; 
+    background:   rgb(4, 42, 115);; 
 }

@@ -23,7 +23,12 @@ def main():
       
       arr = np.array([[sg,al,bg,sc,haem,pcv,rbcc,htn,dia]])
       pred = model.predict(arr)
-      # return render_template('index.html' ,data=pred)
+      if pred == 0:
+         value = "You have CKD"
+      else:
+         value = "You don't have CKD"
+
+      return render_template('index.html' ,data=value)
    else:
       return render_template('index.html')
 

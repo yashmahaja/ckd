@@ -28,7 +28,7 @@ display: flex;
 align-items: center;
 text-align: center;
 letter-spacing: 0.5px;
-color: #000000;
+color: rgb(4, 42, 115);
 margin-bottom: 50px;
 }
 .team{
@@ -56,6 +56,9 @@ margin-bottom: 50px;
     border-radius: 50%;
     border: 2px solid grey;
     /* box-shadow: 0px 0px 10px grey; */
+    margin-left: 90px;
+    margin-top: 44px;
+    
 }
 /* .textcircle{ */
     /* width: 264px; */
@@ -68,6 +71,29 @@ margin-bottom: 50px;
     align-items: center;
     text-align: center;
     justify-content: center;
+}
+.intro2{
+    margin-top: 2%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.textcir2{
+    max-width: 204px;
+    white-space: pre-wrap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #000000;
+    justify-content: center;
+    margin-left: 12px;
+    margin-top: 235px;
 }
 
 .textcir{
@@ -94,6 +120,13 @@ margin-bottom: 50px;
     height: 305px;
     justify-content: space-around;
 }
+.circless2{
+    display:  flex;
+    margin-top: 135px;
+    width: 820px;
+    height: 305px;
+}
+
 
 .social{
 height: 172px;
@@ -111,8 +144,7 @@ margin-top: 59px;
     align-items: center;
     text-align: center;
     letter-spacing: 0.5px;
-    
-    color: #000000;
+    color: rgb(4, 42, 115);
     
 }
 /* .handles{

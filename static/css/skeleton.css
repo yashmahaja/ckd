@@ -4,48 +4,43 @@ width: 1253px;
 height: 484px;
 left: 134px;
 top: 58px;
-
-background: #817F7F;
+border-color: white;
 border-radius: 10px;
 margin-bottom: 120px;
 text-align: center;
 display: flex;
 justify-content: center;
 align-items: center;
-
 }
 .title{
 
-width: 477px;
-height: 115px;
-left: 506px;
-top: 185px;
-
-font-family: 'Raleway';
-font-style: normal;
-font-weight: 700;
-font-size: 40px;
-line-height: 160%;
-letter-spacing: 0.5px;
-
-color: #FFFFFF;
+    width: 477px;
+    height: 115px;
+    left: 365px;
+    top: 127px;
+    position: absolute;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 160%;
+    letter-spacing: 0.5px;
+    color: rgb(4, 42, 115);
 
 }
 
 .btn{
 width: 226px;
 height: 86px;
-
-background: #FFFEFE;
+background: rgb(238,114,61);
 border-radius: 50px;
 border: none;
-color: black;
+color: white;
 padding: 15px 32px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
-margin-top: 74px;
-
+margin-top: 81px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 700;
